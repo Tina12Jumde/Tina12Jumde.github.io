@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web_Era</title>
+
+    <!-- link bootstrap css & js -->
+    <link rel="stylesheet" href="./vendors/bootstrap-5.3.3/css/bootstrap.min.css">
+    <script src="./vendors/bootstrap-5.3.3/js/bootstrap.bundle.min.js"></script>
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="styles/style.css">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="./vendors/fontawesome-free-6.5.2/fontawesome-free-6.5.2-web/css/all.css">
+
+    <!-- AOS  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        .about-numbers-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 150px);
+            gap: 1.25rem;
+        }
+
+        .about-grid-child {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .about-number{
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        .about-context{
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <!-- responsive navbar using bootstrap -->
+    <!-- contact navbar -->
+    <div class="container-fluid bg-black py-1 d-none d-lg-block">
+        <div class="container">
+            <div class="row">
+                <div class="col navbar-contact-text">
+                    <span class="fw-bolder">+91 9665138224 | github@Tina12Jumde</span>
+                </div>
+                <div class="col navbar-social-icons text-light d-flex justify-content-end align-items-center gap-3">
+                    <i class="fa-brands fa-facebook fs-5"></i>
+                    <i class="fa-brands fa-instagram fs-5"></i>
+                    <i class="fa-brands fa-linkedin fs-5"></i>
+                    <i class="fa-brands fa-github fs-5"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- main navbar -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow position-sticky top-0 z-3">
+        <div class="container">
+            <!-- main navbar logo -->
+            <span class="main-navbar-logo navbar-brand fw-bold fs-3">Web_Era</span>
+
+            <!-- mobile and tablet main menu trigger -->
+
+            <button class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#mtmm">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <!-- main navbar menu -->
+            <div class="navbar-collpase offcanvas offcanvas-end" data-bs-backdrop="static" id="mtmm">
+                <div class="offcanvas-body">
+
+                    <button class="btn btn-close d-lg-none" data-bs-dismiss="offcanvas"> </button>
+
+                    <ul class="navbar-nav ms-auto fw-medium align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <a class="nav-link dropdown-toggle" href="" data-bs-toggle="dropdown">Service</a>
+                                <ul class="dropdown-menu service-mega-menu">
+                                    <li class="dropdown-item">item 1</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">Testimonial</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">Contact</a>
+                        </li>
+                        <li class="nav-item main-navbar-cta px-2 py-1">
+                            <a class="nav-link" href="">Hire Me !</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- mobile menu(display only on mobile and tablets) -->
+
+    <div class="w-100 d-lg-none mobile-menu-special">
+        <div class="mobile-menu-icon-container">
+            <div class="mobile-menu-icon">
+                <a href="tel:+91 9665138224"><i class="fa-solid fa-phone"></i></a>
+            </div>
+            <div class="mobile-menu-icon">
+                <a href="https://wa.me/919665138224"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+            <div class="mobile-menu-icon testimonial-trigger">
+                <i class="fa-solid fa-home fa-2x"></i>
+            </div>
+            <div class="mobile-menu-icon">
+                <a href="/"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+            <div class="mobile-menu-icon">
+                <a href=""><i class="fa-solid fa-bars"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- heros sections -->
+
+    <div class="container-fluid bg-black">
+        <div class="container">
+            <div class="row py-5">
+                <div class="col-12 col-lg-6 py-5" data-aos="fade-right">
+                    <!-- Normal Text Intro -->
+                    <h4 class="text-white">
+                        I'm a Full Stack Web Developer
+                    </h4>
+                    <span class="fw-bold py-3 fs-5">
+                        <a style="color: var(--color-4);" href="https://github.com/Tina12Jumde">GitHub@Tina12Jumde</a>
+                    </span>
+                    <div class="py-5 d-flex gap-3">
+                        <img class="img-fluid heros-intro-imgs" src="./media/js.png" alt="">
+                        <img class="img-fluid heros-intro-imgs" src="./media/node.png" alt="">
+                        <img class="img-fluid heros-intro-imgs" src="./media/react.png" alt="">
+                        <img class="img-fluid heros-intro-imgs" src="./media/bootstrap.png" alt="">
+                    </div>
+                    <div class="">
+                        <p class="text-light">contact for project</p>
+                        <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#project-form-1">
+                            Let's Get Started !
+                        </button>
+                        <!-- pop-up form for starting project -->
+
+                        <div class="modal fade" id="project-form-1">
+                            <div class="modal-dialog bg-black">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Happy for a project 😊</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form action="">
+                                            <div class="row gap-2">
+                                                <div class="col">
+                                                    <input type="text" placeholder="name" class="form-control">
+                                                </div>
+                                                <div class="col">
+                                                    <input type="number" placeholder="phone" class="form-control">
+                                                </div>
+                                                <div class="col-12">
+                                                    <input type="email" placeholder="email" class="form-control">
+                                                </div>
+                                                <div class="col-12">
+                                                    <select class="form-select" name="" id="">
+                                                        <option value="">Please Select Service</option>
+                                                        <option value="">Web Development</option>
+                                                        <option value="">Digital Marketing</option>
+                                                        <option value="">Mobile App Development</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col">
+                                                    <textarea class="form-control" rows="10"
+                                                        placeholder="message if any !" name="" id=""></textarea>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-success">Submit <span
+                                                class="fa-solid fa-paper-plane"></span></button>
+                                        <button type="button" class="btn btn-danger"
+                                            data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rotate-text-container col-12 col-lg-6 py-5" data-aos="zoom-in">
+                    <!-- spinning text animation -->
+                    <h5 class="position-relative text-white fw-bold" id="hero-rotate-text">| Web Developer | App
+                        Development | Digital Marketing &nbsp;</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- perks -->
+
+    <div class="container-fluid" data-aos="fade-down">
+        <div class="row">
+            <div class="col bg-info py-2 text-center">
+                <span class="fw-bold fs-4">Web Development</span>
+            </div>
+            <div class="col bg-danger py-2 text-center">
+                <span class="fw-bold fs-4">App Development</span>
+            </div>
+            <div class="col bg-warning py-2 text-center">
+                <span class="fw-bold fs-4">Digital Marketing</span>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- about us section -->
+
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <!-- numbers -->
+                    <div class="about-numbers-grid">
+                        <div class="shadow-lg about-grid-child bg-dark text-light">
+                            <span class="about-number"  data-number="100"> 100+</span>
+                            <span class="about-context">Projects Completed</span>
+                        </div>
+                        <div class="shadow-lg about-grid-child bg-dark text-light">
+                            <span class="about-number"  data-number="20">20+</span>
+                            <span class="about-context">Programming Languages</span>
+                        </div>
+                        <div class="shadow-lg about-grid-child bg-dark text-light" >
+                            <span class="about-number" data-number="999">999+</span>
+                            <span class="about-context">Hours Of Coding</span>
+                        </div>
+                        <div class="shadow-lg about-grid-child" >
+                            <span class="about-number" data-number="550">550+</span>
+                            <span class="about-context">Connections</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <!-- about text data -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--service section-->
+
+    <div class="service container">
+
+        <h1>Our <span class="welcome-highlight">Services</span></h1>
+
+        <div class="service-cards">
+            <div class="service-card">
+                <div class="service-content">
+                    <div class="service--img-container">
+                        <img class="service-img" src="picsum.jpg" alt="">
+                    </div>
+                    <div class="service-data">
+                        <div class="parent-for-service-icon">
+                            <i class="fa-solid fa-user fa-2x service-icon"></i>
+                        </div>
+
+                        <h3 class="service-title">Web Development</h3>
+                        <p class="service-disc">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa exercitationem, ad nesciunt
+                            velit quibusdam autem tempora sit nemo vitae ex enim nam dignissimos, doloremque fugiat unde
+                            sunt! Voluptatum, quae tenetur.
+                        <div>
+                            <button class="heros-cta">Get Quote</button>
+                        </div>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-content">
+                    <div class="service--img-container">
+                        <img class="service-img" src="picsum.jpg" alt="">
+                    </div>
+                    <div class="service-data">
+                        <div class="parent-for-service-icon">
+                            <i class="fa-solid fa-user fa-2x service-icon"></i>
+                        </div>
+
+                        <h3 class="service-title">Digital Marketing</h3>
+                        <p class="service-disc">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa exercitationem, ad nesciunt
+                            velit quibusdam autem tempora sit nemo vitae ex enim nam dignissimos, doloremque fugiat unde
+                            sunt! Voluptatum, quae tenetur.
+                        <div>
+                            <button class="heros-cta">Get Quote</button>
+                        </div>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-content">
+                    <div class="service--img-container">
+                        <img class="service-img" src="picsum.jpg" alt="">
+                    </div>
+                    <div class="service-data">
+                        <div class="parent-for-service-icon">
+                            <i class="fa-solid fa-user fa-2x service-icon"></i>
+                        </div>
+
+                        <h3 class="service-title">Mobile App</h3>
+                        <p class="service-disc">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa exercitationem, ad nesciunt
+                            velit quibusdam autem tempora sit nemo vitae ex enim nam dignissimos, doloremque fugiat unde
+                            sunt! Voluptatum, quae tenetur.
+                        <div>
+                            <button class="heros-cta">Get Quote</button>
+                        </div>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- footer -->
+
+    <div class="container-fluid bg-black mt-5 pt-5 pb-2">
+        <div class="container">
+            <div class="row flex-column flex-lg-row">
+                <div class="col">
+                    <span class="navbar-brand fw-bold fs-3 text-light">Web_Era</span>
+                    <p class="text-secondary">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. In earum veniam aliquid! Iusto
+                        voluptate nisi laborum nulla expedita veritatis deleniti quasi officia quo, labore laboriosam
+                        minus! Quos possimus ex expedita impedit cupiditate magnam quae atque aliquid veritatis ratione
+                        praesentium repellendus, recusandae assumenda beatae, perferendis pariatur voluptatibus! Quam
+                        iste rerum consequatur.
+                    </p>
+                </div>
+                <div class="col">
+                    <span class="fs-3 text-light">Quick Links</span>
+                    <ul class="footer-links">
+                        <li>Home</li>
+                        <li>Contact</li>
+                        <li>Project</li>
+                        <li>Learn More</li>
+                        <li>Hire Me !</li>
+                        <li>Testimonials</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <iframe class="w-100 h-100" style="min-height:250px"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119065.02905779846!2d78.9901093829612!3d21.16106590253875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c0a5a31faf13%3A0x19b37d06d0bb3e2b!2sNagpur%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1716864911449!5m2!1sen!2sin"
+                        style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="end-credits text-center py-2 fw-semibold">
+            All Right Reserved &copy; Made By Web_Era
+        </div>
+    </div>
+
+</body>
+
+<!-- JQuery -->
+<script type="text/JavaScript" src="./vendors/jquery-3.7.1.min.js"></script>
+
+<script type="text/JavaScript" src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+<!-- custom js -->
+<script src="./scripts/script.js"></script>
+
+</html>
